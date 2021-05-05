@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> My family book</title>
+    </head>
+
+    <body>
+        <center>
+
+            <h1 id="heading"> My Family Book</h1>
+            <br>
+            <img id="image" style = "width: 700px; height: 500px;" src="91zbi9M+mKL.jpg">
+            <br>
+            <h3 id="name"></h3>
+            <br>
+            <button type="button" style = "padding: 5px; background-color: chartreuse; color: darkblue; width: 100px; height: 30px;" id="button_next" onclick="next()">
+                Next
+            </button>
+
+            <script>
+                var names_array = ["Me", "My Mom", "My Dad", "My Sister"];
+                var images_array = ["IMG_0970.JPG", "IMG_1045.jpeg", "IMG_1148.jpeg", "IMG_3966.JPG"];
+                var i = 0;
+
+                function next() {
+                    document.getElementById("image").src = images_array[i];
+                    document.getElementById("name").textContent = names_array[i];
+                    i++;
+                    if(i==4) {
+                        i=0;
+                    }
+                };
+
+            </script>
+
+
+        </center>
+    </body>
+</html>
